@@ -5,6 +5,6 @@ An app where you can find out information and read reviews of local restaurants.
 ## Installing
 
 - Clone the project from Github
-- Navigate to dbhelp.js and choose a port number for yourself and enter it on line 11
+- Navigate to dbhelper.js and choose a port number for yourself and enter it on line 11
 - Spin up (run) the server by typing "$ python -m SimpleHTTPServer 4002 (enter your port number instead of 4002)"
 - Open up Chrome and type in "localhost:4002 (or your port number instead of 4002)"
