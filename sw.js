@@ -1,3 +1,5 @@
+
+/* Add files that need to be cached */
 var filesToCache = [
   '/',
   './index.html',
@@ -21,6 +23,7 @@ var filesToCache = [
 
 var staticCacheName = 'pages-cache-v1.0';
 
+/* Install Service Worker */
 self.addEventListener('install', function(event) {
   console.log('Installing service worker and cache static assets');
   event.waitUntil(
@@ -29,23 +32,3 @@ self.addEventListener('install', function(event) {
     })
   );
 });
-
-/*self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    if(response) {
-      return response;
-    }else {
-      return fetch(event.request).then(function(response) {
-        const responseClone = response.clone();
-        caches.open(staticCacheName).then(function(cache) {
-          cache.put(event.request, responseClone);
-        })
-        return response;
-      })
-      .cache(function(error) {
-        console.log(error);
-      });
-    };
-  }));
-});
-*/
